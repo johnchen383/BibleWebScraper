@@ -69,8 +69,9 @@ for p in paragraphs:
 if book.lower() == "psalm":
     text = text.replace("Selah", "        Selah")
 
-print(text)
+text=text.replace("\u02BC", "'")
 
+print(text)
 
 #scrape copyright notice
 cpyright = soup.find("div", class_="copyright-table")
