@@ -73,10 +73,6 @@ text=text.replace("\u02BC", "'")
 
 print(text)
 
-#scrape copyright notice
-cpyright = soup.find("div", class_="copyright-table")
-# print(cpyright.prettify())
-
 
 #Create PDF
 pdf = FPDF(orientation = 'P', unit = 'mm', format = 'A4')
@@ -89,6 +85,18 @@ pdf.set_font('Helvetica', style = '', size = 24)
 pdf.write(7, header)
 
 pdf.set_font('Helvetica', style = '', size = 12)
+
+#Write line numbers
+spacing=7
+limit=34
+initx=22
+inity=32
+
+for i in range(1, limit + 1):
+    pdf.text(initx, inity + i * spacing, str(i))
+
+
+
 pdf.write(7, text)
 
 #Output
