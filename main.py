@@ -87,13 +87,13 @@ pdf.write(7, header)
 pdf.set_font('Helvetica', style = '', size = 12)
 
 #Write line numbers
-spacing=7
-limit=34
-initx=22
-inity=32
+# spacing=7
+# limit=34
+# initx=22
+# inity=32
 
-for i in range(1, limit + 1):
-    pdf.text(initx, inity + i * spacing, str(i))
+# for i in range(1, limit + 1):
+#     pdf.text(initx, inity + i * spacing, str(i))
 
 
 
